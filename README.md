@@ -7,7 +7,9 @@ This is just a pet-project to practice and introduce these practices and techniq
 - Use Hexagonal Architecture to decouple layers from each other.
 - Decouple bussiness behavior using CQRS.
 - Vertical slicing of the increments.
-- TDD.
+- Test Driven Develompent.
+- Trunk Based Development.
+- Continuous integration and deployment. 
 
 
 ### Disclaimer
