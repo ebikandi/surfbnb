@@ -43,3 +43,27 @@ For the Minimum Marketable Product (MMP) we want the following features:
 - A board will only be rented when it's available. The owner of the board won't be able to set it as unavailable/unrentable untill the current renting has finished.
 
 - For now, a surfboard rent will be an hour long with a fixed price of 10€.
+
+## Approach
+
+### Diagrams & drawings
+
+To keep the diagrams inside the repo, I have chosen to use the [VsCode Excalidraw plugin](https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor).
+
+That way, these are kept closest where they impact and they're versioned with the repo. Also, it's a free tool, which is always thanked.
+
+### Database setup
+
+The database is a PostgreSql, dockerized using `docker-compose` running in [Orbstack](https://orbstack.dev/).
+
+- To run it, go to the `./database` folder and run `docker-compose up`. I preffer not to run it on a detached way to see the logs directly on the terminal.
+- Each time the container is created with `docker-compose up` it will execute the `init.sql` script to create a fresh database, allowing the pet-project-database to have a fresh start.
+
+- As it's using an anonymous `volume` for the, the database will be dropped each time we remove the container via `docker-compose down`.
+
+- This database is hosted in localhost so to connect with [DBeaver](https://dbeaver.io/), once you have the database running, simply create a new postgresql database connection with these parameters (see the `docker-compose.yml`):
+  - Host: localhost
+  - database: surfbnb
+  - port: 5432
+  - username: postgresql
+  - password: postgresql
