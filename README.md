@@ -48,9 +48,16 @@ For the Minimum Marketable Product (MMP) we want the following features:
 
 ### Diagrams & drawings
 
-To keep the diagrams inside the repo, I have chosen to use the [VsCode Excalidraw plugin](https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor).
+To keep the diagrams inside the repo, I have chosen to use the `.excalidraw` files. Excalidraw has plugins for `VsCode` and `WebStorm`, which makes it very easy to visualize the diagrams from the files. 
 
 That way, these are kept closest where they impact and they're versioned with the repo. Also, it's a free tool, which is always thanked.
+
+### Domain Discovery
+
+As one of the techniques I wanted to practice is Domain Driven Design I started with an Event Storming session to see clearly the different entitities and the boundaries between them.
+The outcome of this process is in the [event-storming.excalidraw](./event-storming.excalidraw) file. Here's a brief explanation of the identified domains:
+
+#### 
 
 ### Database setup
 
@@ -67,3 +74,5 @@ The database is a PostgreSql, dockerized using `docker-compose` running in [Orbs
   - port: 5432
   - username: postgresql
   - password: postgresql
+
+
